@@ -87,7 +87,7 @@ body{
   width: 100%;
   height: 100%;
   background: #fff;
-  display: block;
+  display: none;
   top: 0;
   position: absolute;
 }
@@ -299,7 +299,7 @@ body{
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	display: none;
+	display: block;
 	z-index: 20;
 }
 
@@ -383,7 +383,7 @@ body{
 
 .apps{
 	border-radius: 7px;
-	background: #eeebeb;
+	background: #fff;
 	width: 25px;
 	height: 25px;
 	margin-top: 5px;
@@ -535,7 +535,7 @@ body{
 
 <div class="mania">
 <div class="appstela">
-		<img src="https://www.gadgetdaily.xyz/wp-content/uploads/2013/12/Chrome-5.png"/>
+		<img src="https://png.icons8.com/metro/1600/steam.png"/>
 </div>
 </div>
 
@@ -562,7 +562,11 @@ body{
 </div>
 </center>
 
+
 </div>
+
+
+
 
 <style>
 .borderbe{
@@ -591,17 +595,170 @@ body{
 	<div class="apps">
 		<img src="https://www.gadgetdaily.xyz/wp-content/uploads/2013/12/Chrome-5.png"/>
 	</div>
-	<div class="apps">
-		<img src="https://www.gadgetdaily.xyz/wp-content/uploads/2013/12/Chrome-5.png"/>
-	</div>
-	<div class="apps">
-		<img src="https://www.gadgetdaily.xyz/wp-content/uploads/2013/12/Chrome-5.png"/>
-	</div>
-	<div class="apps">
-		<img src="https://www.gadgetdaily.xyz/wp-content/uploads/2013/12/Chrome-5.png"/>
+	<div class="apps" id="app2">
+		<img src="https://support.apple.com/content/dam/edam/applecare/images/en_US/applemusic/featured-content-music-ios-icon_2x.png"/>
 	</div>
 </center>
 </div>
+
+<style>
+.itunes{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	top: 0;
+}
+
+#horas{
+	color: #000 !important;
+}
+
+.bateria{
+	border: 1px solid #000;
+}
+
+.cheiof{
+	background: #000;
+}
+
+.itunes h1{
+	font-size: 19px;
+	left: 10px;
+	position: relative;
+}
+
+.align-itunes{
+	padding-top: 18px;
+	margin-top: 13px;
+}
+
+.itunes li{
+	color: #e33a3a;
+	border-bottom: 1px solid #b0a6a678;
+	padding: 3px;
+	width: 90%;
+	cursor: pointer;
+	left: 10px;
+	position: relative;
+}
+
+.itunes h2{
+	font-size: 15px;
+	left: 10px;
+	position: relative;
+}
+
+.musicitunes{
+	height: 90px;
+	width: 90px;
+	display: inline-block;
+	position: relative;
+	border-radius: 5px;
+	margin-left: 3px;
+	left: 15px;
+	cursor: pointer;
+}
+
+.musicitunes img{
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+
+.itunesfooter{
+	width: 100%;
+	height: 40px;
+	border-top: 1px solid #ccc;
+	position: absolute;
+	bottom: 0;
+}
+
+.bibi{
+	background-image: url(https://png.icons8.com/ios-glyphs/1600/music-library.png);
+	height: 24px;
+	width: 24px;
+	position: relative;
+	background-size: cover;
+	left: 5px;
+	top: 5px;
+}
+
+.tocando{
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	background: #e2e0e0;
+	bottom: 40px;
+	border-top: 1px solid #ccc;
+}
+
+.tocandomusic{
+	left: 0;
+	height: 30px;
+	width: 30px;
+	left: 5px;
+}
+
+.tocando p{
+	left: 14px;
+	position: relative;
+	bottom: 5px;
+}
+
+.iconplay{
+	background-image: url(https://png.icons8.com/metro/1600/play.png);
+	height: 24px;
+	width: 24px;
+	position: relative;
+	background-size: cover;
+	float: right;
+	bottom: 43px;
+	cursor: pointer;
+}
+
+#itunes{
+	display: none;
+}
+
+</style>
+
+<div class="itunes" id="itunes">
+
+<div class="align-itunes">
+<h1>Biblioteca</h1>
+<li>Playlists</li>
+<li>Álbuns</li>
+<li>Músicas</li>
+<li>Músicas Transferidas</li>
+<h2>Adições Recentes</h2>
+
+<div class="musicitunes">
+<img src="https://is4-ssl.mzstatic.com/image/thumb/Features6/v4/ee/bd/69/eebd6962-9b25-c177-c175-b3b3e641a29d/dj.edqjfvzd.jpg/1200x630bb.jpg"/>
+</div>
+<div class="musicitunes">
+<img src="http://www.slashparadise.com/discography/albums-slash/use-your-illusion-1.jpg"/>
+</div>
+
+<div class="tocando">
+<div class="music tocandomusic">
+<img src="http://www.slashparadise.com/discography/albums-slash/use-your-illusion-1.jpg"/>
+</div>
+<p>Guns and roses - ...</p>
+<div class="iconplay"></div>
+</div>
+
+<div class="itunesfooter">
+
+<div class="bibi"></div>
+
+</div>
+
+</div>
+
+</div>
+
+
 
 </div>
 
@@ -635,23 +792,38 @@ var main = document.getElementById('main');
 var voltar = document.getElementById('voltar');
 var ir = document.getElementById('ir');
 var preto = document.getElementById('preto');
+var app2 = document.getElementById('app2');
+var itunes = document.getElementById('itunes');
 
 
 $('#voltar').click(function(){
               if(voltar.style = "background: #9d9c9c;"){
               	search.style= "left: 0; opacity: 1;";
-              	voltar.style= "background: #fff";
-              	ir.style= "background: #9d9c9c";
+              	voltar.style= "background: #fff;";
+              	ir.style= "background: #9d9c9c;";
               }
        });
 
 $('#ir').click(function(){
               if(ir.style = "background: #9d9c9c;"){
               	search.style= "left: -190px; opacity: 0;";
-              	voltar.style= "background: #9d9c9c";
-              	ir.style= "background: #fff";
+              	voltar.style= "background: #9d9c9c;";
+              	ir.style= "background: #fff;";
               }
        });
+
+$('#app2').click(function(){
+              if(itunes.style = "display: non;e"){
+              	itunes.style = "display: block;";
+              }
+       });
+
+$('#home').click(function(){
+              if(itunes.style = "display: block"){
+              	itunes.style = "display: none;";
+              }
+       });
+
 
 
 
@@ -751,7 +923,7 @@ month = " de Dezembro"
 
 setTimeout(function(){
    ligando.style.display = 'none';
-   ligado.style.display = "block";
+   ligado.style.display = "none";
 }, 7000);
 
 
