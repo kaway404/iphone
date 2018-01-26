@@ -87,7 +87,7 @@ body{
   width: 100%;
   height: 100%;
   background: #fff;
-  display: none;
+  display: block;
   top: 0;
   position: absolute;
 }
@@ -299,7 +299,7 @@ body{
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	display: block;
+	display: none;
 	z-index: 20;
 }
 
@@ -314,8 +314,8 @@ body{
 
 	<div class="toper">
 		<center><p id="horas">00:00</p></center>
-		<div class="bateria">
-			<div class="cheiof"></div>
+		<div class="bateria" id="bateria">
+			<div class="cheiof" id="bateria2"></div>
 		</div>
 	</div>
 
@@ -610,18 +610,6 @@ body{
 	top: 0;
 }
 
-#horas{
-	color: #000 !important;
-}
-
-.bateria{
-	border: 1px solid #000;
-}
-
-.cheiof{
-	background: #000;
-}
-
 .itunes h1{
 	font-size: 19px;
 	left: 10px;
@@ -794,6 +782,9 @@ var ir = document.getElementById('ir');
 var preto = document.getElementById('preto');
 var app2 = document.getElementById('app2');
 var itunes = document.getElementById('itunes');
+var bateria = document.getElementById('bateria');
+var horast = document.getElementById('horas');
+var bateriacarregado = document.getElementById('bateria2');
 
 
 $('#voltar').click(function(){
@@ -813,7 +804,10 @@ $('#ir').click(function(){
        });
 
 $('#app2').click(function(){
-              if(itunes.style = "display: non;e"){
+              if(itunes.style = "display: none;"){
+              	bateria.style = "border: 1px solid #000;";
+              	bateriacarregado.style = "background: #000;";
+              	horast.style = "color: #000;";
               	itunes.style = "display: block;";
               }
        });
@@ -821,6 +815,9 @@ $('#app2').click(function(){
 $('#home').click(function(){
               if(itunes.style = "display: block"){
               	itunes.style = "display: none;";
+              	bateria.style = "border: 1px solid #fff;";
+              	bateriacarregado.style = "background: #fff;";
+              	horast.style = "color: #fff;";
               }
        });
 
@@ -923,7 +920,7 @@ month = " de Dezembro"
 
 setTimeout(function(){
    ligando.style.display = 'none';
-   ligado.style.display = "none";
+   ligado.style.display = "block";
 }, 7000);
 
 
