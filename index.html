@@ -11,6 +11,8 @@
 
 *{
   font-family: 'Roboto', sans-serif;
+  outline: none;
+  list-style:none;
 }
 
 body{
@@ -25,6 +27,7 @@ body{
   margin: 0px auto;
   border-radius: 20px;
   box-shadow: 1px 2px 3px rgba(0,0,0,.70);
+  z-index: 1000;
 }
 
 .top{
@@ -256,6 +259,50 @@ body{
   cursor: pointer;
 }
 
+.toper{
+	position: absolute;
+	width: 100%;
+	z-index: 50;
+	top: 0;
+}
+
+.toper #horas{
+	color: #fff;
+	position: relative;
+	font-size: 14px;
+	bottom: 10px;
+	height: 17px;
+}
+
+.bateria{
+	width: 20px;
+	height: 9px;
+	background: transparent;
+	border: 1px solid #fff;
+	float: right;
+	right: 5px;
+	position: relative;
+	bottom: 39px;
+	border-radius: 2px;
+}
+
+.cheiof{
+	width: 91%;
+	background: #fff;
+	height: 80%;
+	position: absolute;
+	top: 1px;
+	left: 1px;
+}
+
+.home{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: none;
+	z-index: 20;
+}
+
 </style>
 <body onload="horas()">
 <div class="iphone">
@@ -264,6 +311,13 @@ body{
     <div class="bolinha2"></div>
   </div>
 <div class="tela">
+
+	<div class="toper">
+		<center><p id="horas">00:00</p></center>
+		<div class="bateria">
+			<div class="cheiof"></div>
+		</div>
+	</div>
 
   <div class="ligando" id="ligando">
     <center>
@@ -318,7 +372,243 @@ body{
     </center>
     </div>
 
+<style>
+.bottomhome{
+	width: 100%;
+	height: 50px;
+	background: #f3f3f3bd;
+	position: absolute;
+	bottom: 0;
+}
+
+.apps{
+	border-radius: 7px;
+	background: #eeebeb;
+	width: 25px;
+	height: 25px;
+	margin-top: 5px;
+	padding: 8px;
+	position: relative;
+	display: inline-block;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+.apps img{
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+.appstela{
+	border-radius: 7px;
+	background: #eeebeb;
+	width: 25px;
+	height: 25px;
+	margin-top: 5px;
+	padding: 8px;
+	position: relative;
+	display: inline-block;
+	margin-left: 8px;
+	cursor: pointer;
+	top: 23px;
+	left: 7px;
+}
+
+.appstela img{
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+.mania{
+	position: absolute;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	background: transparent;
+}
+
+.outro{
+	position: absolute;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	left: -240px;
+	opacity: 1;
+}
+
+.bakat{
+	width: 100%;
+	height: 45px;
+	background: #2e2a2a57;
+	position: relative;
+	display: flex;
+}
+
+#busca{
+	width: 83%;
+	height: 18px;
+	top: 20px;
+	position: relative;
+	left: 10px;
+	border: none;
+	border-radius: 5px;
+	background: #ffffff47;
+	font-size: 10px;
+	padding-left: 20px;
+	z-index: 1500;
+}
+
+.card{
+	width: 90%;
+	height: 70px;
+	background: #ffffff5e;
+	position: relative;
+	top: 10px;
+	border-radius: 10px;
+}
+
+.headercard{
+	width: 100%;
+	height: 20px;
+	background: #d4c7c75c;
+	border-radius: 10px;
+}
+
+.headercard p{
+	text-transform: uppercase;
+	font-size: 10px;
+	position: relative;
+	float: left;
+	left: 24px;
+	bottom: 5px;
+	color: #756464;
+}
+
+.musici{
+	background-image: url(https://support.apple.com/content/dam/edam/applecare/images/en_US/applemusic/featured-content-music-ios-icon_2x.png);
+	height: 15px;
+	width: 15px;
+	position: absolute;
+	background-size: cover;
+	left: 5px;
+	top: 2px;
+}
+
+#search{
+	opacity: 0;
+}
+
+#buscasvg{
+	position: absolute;
+	z-index: 100;
+	top: 20px;
+	height: 15px;
+	width: 15px;
+	left: 10px;
+	top: 22px;
+}
+
+.music{
+	height: 40px;
+	width: 40px;
+	position: relative;
+	top: 5px;
+	border-radius: 3px;
+	float: left;
+	right: 35px;
+	margin-left: 2px;
+}
+
+.music img{
+	width: 100%;
+	height: 100%;
+	border-radius: 3px;
+}
+
+</style>
+
+<div class="home" id="main">
+<div class="photo"></div>
+
+<div class="mania">
+<div class="appstela">
+		<img src="https://www.gadgetdaily.xyz/wp-content/uploads/2013/12/Chrome-5.png"/>
+</div>
+</div>
+
+<div class="mania outro" id="search">
+	<div class="photo"></div>
+	<div class="bakat">
+		<svg id="buscasvg" enable-background="new 0 0 100 100" id="Layer_1" version="1.1" viewBox="0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path clip-rule="evenodd" d="M64.5,44.6c0-11.6-9.4-20.9-20.9-20.9c-11.6,0-20.9,9.4-20.9,20.9  c0,11.6,9.4,20.9,20.9,20.9C55.1,65.6,64.5,56.2,64.5,44.6z M80,79.3l-1.8,1.8l-19-19c-4.2,3.7-9.6,6-15.7,6  c-13,0-23.5-10.5-23.5-23.5c0-13,10.5-23.5,23.5-23.5c13,0,23.5,10.5,23.5,23.5c0,6-2.3,11.5-6,15.7L80,79.3z" fill="#e5e5e5" fill-rule="evenodd"/></svg><input type="text" id="busca" placeholder="Buscar"/>
+	</div>
+
+<center>
+<div class="card musica">
+<div class="headercard">
+	<div class="musici"></div>
+	<p>música</p>
+</div>
+
+<div class="music">
+<img src="https://is4-ssl.mzstatic.com/image/thumb/Features6/v4/ee/bd/69/eebd6962-9b25-c177-c175-b3b3e641a29d/dj.edqjfvzd.jpg/1200x630bb.jpg"/>
+</div>
+<div class="music">
+<img src="http://www.slashparadise.com/discography/albums-slash/use-your-illusion-1.jpg"/>
+</div>
+
+</div>
+</center>
+
+</div>
+
+<style>
+.borderbe{
+	height: 9px;
+	width: 9px;
+	background: #fff;
+	position: relative;
+	top: 305px;
+	border-radius: 50%;
+	cursor: pointer;
+	display: inline-block;
+}
+
+#voltar{
+	background: #9d9c9c;
+}
+</style>
+
+<center>
+<div class="borderbe" id="voltar"></div>
+<div class="borderbe" id="ir"></div>
+</center>
+
+<div class="bottomhome">
+	<center>
+	<div class="apps">
+		<img src="https://www.gadgetdaily.xyz/wp-content/uploads/2013/12/Chrome-5.png"/>
+	</div>
+	<div class="apps">
+		<img src="https://www.gadgetdaily.xyz/wp-content/uploads/2013/12/Chrome-5.png"/>
+	</div>
+	<div class="apps">
+		<img src="https://www.gadgetdaily.xyz/wp-content/uploads/2013/12/Chrome-5.png"/>
+	</div>
+	<div class="apps">
+		<img src="https://www.gadgetdaily.xyz/wp-content/uploads/2013/12/Chrome-5.png"/>
+	</div>
+</center>
+</div>
+
+</div>
+
+
   </div>
+
+
 
   <div class="bottom">
     <center>
@@ -340,11 +630,35 @@ var senhabol4 = document.getElementById('senhabol4');
 var senhabol5 = document.getElementById('senhabol5');
 var senhabol6 = document.getElementById('senhabol6');
 var sairsenha = document.getElementById('sairsenha');
+var search = document.getElementById('search');
+var main = document.getElementById('main');
+var voltar = document.getElementById('voltar');
+var ir = document.getElementById('ir');
+var preto = document.getElementById('preto');
+
+
+$('#voltar').click(function(){
+              if(voltar.style = "background: #9d9c9c;"){
+              	search.style= "left: 0; opacity: 1;";
+              	voltar.style= "background: #fff";
+              	ir.style= "background: #9d9c9c";
+              }
+       });
+
+$('#ir').click(function(){
+              if(ir.style = "background: #9d9c9c;"){
+              	search.style= "left: -190px; opacity: 0;";
+              	voltar.style= "background: #9d9c9c";
+              	ir.style= "background: #fff";
+              }
+       });
+
 
 
 function horas(){
   camada = document.getElementById('horario');
   data = document.getElementById('data');
+  horasd = document.getElementById('horas');
   hoje = new Date();
   hora = hoje.getHours();
   if(hora<=9){
@@ -357,6 +671,7 @@ function horas(){
     if(segundo<=9){
       segundo = "0" + segundo;
     }camada.innerHTML = hora + ":" + minuto ;setTimeout("horas()",1000);
+    horasd.innerHTML = hora + ":" + minuto ;setTimeout("horas()",1000);
 
 var now = new Date();
 var hours = now.getHours();
@@ -442,12 +757,14 @@ setTimeout(function(){
 
 window.setInterval(function(){
 
+if (home.style.display === "none") {
 if (senha.style.display === "none") {
               ligado.style = "display: block;";
              if (ligando.style.display === "none") {
               ligado.style = "display: block;";
             }
           }
+      }
 
           
 
@@ -504,6 +821,8 @@ $('#tecla1').click(function(){
 $('#tecla1').click(function(){
               if(senhabol5.style = "background: #fff;"){
                 senhabol6.style = "background: #fff;"
+                senha.style = "display: none;";
+                main.style = "display: block;";
               }
        });
 
@@ -548,6 +867,8 @@ $('#tecla2').click(function(){
 $('#tecla2').click(function(){
               if(senhabol5.style = "background: #fff;"){
                 senhabol6.style = "background: #fff;"
+                senha.style = "display: none;";
+                main.style = "display: block;";
               }
        });
 
@@ -591,6 +912,8 @@ $('#tecla3').click(function(){
 $('#tecla3').click(function(){
               if(senhabol5.style = "background: #fff;"){
                 senhabol6.style = "background: #fff;"
+                senha.style = "display: none;";
+                main.style = "display: block;";
               }
        });
 
@@ -634,6 +957,8 @@ $('#tecla4').click(function(){
 $('#tecla4').click(function(){
               if(senhabol5.style = "background: #fff;"){
                 senhabol6.style = "background: #fff;"
+                senha.style = "display: none;";
+                main.style = "display: block;";
               }
        });
 
@@ -677,6 +1002,8 @@ $('#tecla5').click(function(){
 $('#tecla5').click(function(){
               if(senhabol5.style = "background: #fff;"){
                 senhabol6.style = "background: #fff;"
+                senha.style = "display: none;";
+                main.style = "display: block;";
               }
        });
 
@@ -721,6 +1048,8 @@ $('#tecla6').click(function(){
 $('#tecla6').click(function(){
               if(senhabol5.style = "background: #fff;"){
                 senhabol6.style = "background: #fff;"
+                senha.style = "display: none;";
+                main.style = "display: block;";
               }
        });
 
@@ -764,6 +1093,8 @@ $('#tecla7').click(function(){
 $('#tecla7').click(function(){
               if(senhabol5.style = "background: #fff;"){
                 senhabol6.style = "background: #fff;"
+                senha.style = "display: none;";
+                main.style = "display: block;";
               }
        });
 
@@ -807,6 +1138,8 @@ $('#tecla8').click(function(){
 $('#tecla8').click(function(){
               if(senhabol5.style = "background: #fff;"){
                 senhabol6.style = "background: #fff;"
+                senha.style = "display: none;";
+                main.style = "display: block;";
               }
        });
 
@@ -850,6 +1183,8 @@ $('#tecla9').click(function(){
 $('#tecla9').click(function(){
               if(senhabol5.style = "background: #fff;"){
                 senhabol6.style = "background: #fff;"
+                senha.style = "display: none;";
+                main.style = "display: block;";
               }
        });
 
@@ -893,6 +1228,8 @@ $('#tecla0').click(function(){
 $('#tecla0').click(function(){
               if(senhabol5.style = "background: #fff;"){
                 senhabol6.style = "background: #fff;"
+                senha.style = "display: none;";
+                main.style = "display: block;";
               }
        });
 
